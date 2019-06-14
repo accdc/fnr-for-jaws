@@ -1,0 +1,11 @@
+[Common Keys]
+Alt+R=MoveToReplaceField
+Alt+S=MoveToSearchEdit
+Control+B=MoveToBrowseBtn
+Alt+E=MoveToExcludeEdit
+Alt+M=MoveToFileMaskEdit
+Alt+F=MoveToFindField
+Control+R=MoveToReplaceBtn
+Control+F=MoveToFindBtn
+Alt+V=MoveToResultsField
+Alt+P=MoveToPreviewField

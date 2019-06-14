@@ -1,0 +1,45 @@
+:function FocusChangedEvent
+:SearchRank 1
+:Param handle/FocusWindow No Description
+:Param handle/PrevWindow No Description
+
+:function GetRichEditFieldText
+:Returns string No Return Description
+:SearchRank 1
+:Param handle/hwnd No Description
+
+:function GetEditFieldText
+:Returns string No Return Description
+:SearchRank 1
+:Param handle/hwnd Handle of edit field.
+
+:script MoveToBrowseBtn
+:SearchRank 1
+
+:script MoveToSearchEdit
+:SearchRank 1
+
+:script MoveToExcludeEdit
+:SearchRank 1
+
+:script MoveToFileMaskEdit
+:SearchRank 1
+
+:script MoveToFindField
+:SearchRank 1
+
+:script MoveToReplaceField
+:SearchRank 1
+
+:script MoveToFindBtn
+:SearchRank 1
+
+:script MoveToReplaceBtn
+:SearchRank 1
+
+:script MoveToResultsField
+:SearchRank 1
+
+:script MoveToPreviewField
+:SearchRank 1
+
