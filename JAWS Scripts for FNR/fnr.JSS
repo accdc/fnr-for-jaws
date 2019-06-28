@@ -1,5 +1,5 @@
 /*
-JAWS scripts for the Find and Replace (FNR) open source tool.
+JAWS scripts for the Find and Replace (FNR) open source tool (V1.8.1)
 https://github.com/accdc/fnr-for-jaws
 Authored by Bryan Garaventa.
 */
@@ -9,12 +9,23 @@ Include "hjconst.jsh" ; default HJ constants
 Include "common.jsm"
 
 globals
-object fsUIA
-const
-clsEdit = "WindowsForms10.EDIT.app.0.141b42a_r14_ad1",
-clsText = "WindowsForms10.STATIC.app.0.141b42a_r14_ad1",
-clsBtn = "WindowsForms10.BUTTON.app.0.141b42a_r14_ad1",
-clsREdit = "WindowsForms10.RichEdit20W.app.0.141b42a_r14_ad1"
+object fsUIA,
+string clsEdit,
+string clsText,
+string clsBtn,
+string clsREdit
+
+Void Function AutoStartEvent ()
+var handle hwnd = GetAppMainWindow (GetFocus ())
+var handle hBtn = GetFirstChild (GetFirstChild (GetPriorWindow (GetLastWindow (GetFirstChild (hwnd)))))
+var handle hEdit = GetNextWindow (hBtn)
+var handle hText = GetNextWindow (hEdit)
+var handle hRE = GetFirstChild (GetNextWindow (GetFirstWindow (FindWindow (hwnd, "", "Find:"))))
+clsBtn = GetWindowClass (hBtn)
+clsEdit = GetWindowClass (hEdit)
+clsText = GetWindowClass (hText)
+clsREdit = GetWindowClass (hRE)
+EndFunction
 
 Void Function FocusChangedEvent (handle FocusWindow, handle PrevWindow)
 var handle next, int found = 0
